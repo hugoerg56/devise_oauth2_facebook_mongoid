@@ -4,13 +4,13 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{devise_oauth2_facebook}
+  s.name = %q{devise_oauth2_facebook_mongoid}
   s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Mooktakim Ahmed"]
-  s.date = %q{2011-02-12}
-  s.email = %q{mooktakim@fluxter.co.uk}
+  s.authors = ["Mooktakim Ahmed", "Hugo Rincon"]
+  s.date = %q{2011-06-09}
+  s.email = %q{hugo@bakedweb.net}
   s.extra_rdoc_files = [
     "README"
   ]
@@ -24,10 +24,10 @@ Gem::Specification.new do |s|
     "lib/devise_oauth2_facebook/model.rb",
     "lib/devise_oauth2_facebook/routes.rb"
   ]
-  s.homepage = %q{http://github.com/mooktakim/devise_oauth2_facebook}
+  s.homepage = %q{https://github.com/hugoerg56/devise_oauth2_facebook_mongoid}
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
-  s.summary = %q{Devise OAuth2 Facebook extension}
+  s.summary = %q{Devise OAuth2 Facebook extension for rails 3 and mongoid}
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
