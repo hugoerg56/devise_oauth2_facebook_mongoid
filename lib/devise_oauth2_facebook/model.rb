@@ -34,14 +34,6 @@ module Devise
           end
         end
  
- 
-#        def find_with_facebook_user(fb_user, token)
-#          user = where(facebook_uid_field.to_sym => fb_user["id"]).first || where(:email => fb_user.email.downcase).first
-#          if user
-#            user.do_update_facebook_user(fb_user, token)
-#          end
-#          user
-#        end
         
         def create_with_facebook_user(fb_user, token)
           user = new(facebook_uid_field.to_sym => fb_user["id"], :password => "fakepass", :password_confirmation => "fakepass")
