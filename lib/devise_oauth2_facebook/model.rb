@@ -26,16 +26,12 @@ module Devise
         Devise::Models.config(self, :facebook_uid_field, :facebook_token_field)
 
         def find_with_facebook_user(fb_user, token)
-          
-          user = User.where(:email => fb_user.email.downcase)
-          begin
-            if user.id?
-                 user
-            end       
-          rescue
-            User.create!(:email => fb_user.email.downcase, :password => token)
+                 
+          if User.last(conditions: {email: fb_user.email.downcase})
+               user
+             else # Create a user with a stub password.
+               User.create!(:email => fb_user.email.downcase, :password => token)
           end
-      
         end
  
  
