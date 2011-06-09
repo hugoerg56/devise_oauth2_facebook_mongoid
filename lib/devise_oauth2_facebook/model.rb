@@ -28,11 +28,14 @@ module Devise
         def find_with_facebook_user(fb_user, token)
           
           user = User.where(:email => fb_user.email.downcase)
-          if user.id?
-               user
-             else # Create a user with a stub password.
-               User.create!(:email => fb_user.email.downcase, :password => token)
+          begin
+            if user.id?
+                 user
+            end       
+          rescue
+            User.create!(:email => fb_user.email.downcase, :password => token)
           end
+      
         end
  
  
