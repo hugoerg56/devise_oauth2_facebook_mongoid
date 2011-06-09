@@ -8,7 +8,7 @@ How to use
 
 Include the gem in Gemfile after devise:
   gem 'devise'
-  gem 'devise_oauth2_facebook'
+  gem 'devise_oauth2_facebook_mongoid'
   gem 'fbgraph', "~> 1.5.4"
 
 Include the ':devise_oauth2_facebook' in your model:
